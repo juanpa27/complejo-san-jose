@@ -1,3 +1,5 @@
+"use client";
+
 import { getSiteConfig, getWhatsAppLink } from "@/lib/content";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
@@ -12,9 +14,7 @@ export default function Home() {
       <Section id="hero" background="sky" className="pt-8">
         <Container>
           <div className="flex flex-col items-center text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-ink mb-4">
-              {config.site.name}
-            </h1>
+            <h1 className="text-4xl md:text-6xl font-bold text-ink mb-4">{config.site.name}</h1>
             <p className="text-xl md:text-2xl text-ink/80 mb-2">{config.site.city}, Paraguay</p>
             <p className="text-lg md:text-xl text-ink/70 max-w-2xl mb-8">
               Pádel Indoor • Piscina • Fútbol • Vóley • Pesque y Pague • Quinchos
@@ -27,7 +27,11 @@ export default function Home() {
               >
                 📱 Reservar por WhatsApp
               </Button>
-              <Button variant="outline" size="lg" onClick={() => window.open(config.site.mapsUrl, "_blank")}>
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={() => window.open(config.site.mapsUrl, "_blank")}
+              >
                 📍 Cómo Llegar
               </Button>
             </div>
@@ -69,7 +73,9 @@ export default function Home() {
       <Section id="contacto" background="gray">
         <Container>
           <div className="text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-ink mb-6">¿Listo para visitarnos?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-ink mb-6">
+              ¿Listo para visitarnos?
+            </h2>
             <p className="text-xl text-ink/70 mb-8">
               📞 {config.site.phone} | 📍 {config.site.city}
             </p>

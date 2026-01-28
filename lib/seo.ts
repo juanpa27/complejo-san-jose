@@ -9,6 +9,7 @@ export function generateSEOMetadata(overrides?: Partial<Metadata>): Metadata {
   const { seo, site } = config;
 
   const metadata: Metadata = {
+    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
     title: seo.title,
     description: seo.description,
     keywords: seo.keywords,

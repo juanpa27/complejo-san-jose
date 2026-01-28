@@ -3,6 +3,7 @@
 ## Para Desarrolladores
 
 ### 1. Primera vez
+
 ```bash
 # Instalar dependencias
 pnpm install
@@ -14,15 +15,19 @@ pnpm dev
 Abre http://localhost:3000
 
 ### 2. Editar contenido
+
 Edita: `content/site.json`
 
 ### 3. Agregar imágenes
+
 Coloca tus imágenes en:
+
 - `/public/images/brand/` - Logo
 - `/public/images/services/` - Fotos de servicios
 - `/public/images/gallery/` - Galería
 
 ### 4. Verificar calidad
+
 ```bash
 pnpm lint          # Verificar código
 pnpm type-check    # Verificar tipos
@@ -30,6 +35,7 @@ pnpm format        # Formatear código
 ```
 
 ### 5. Build de producción
+
 ```bash
 pnpm build
 pnpm start
@@ -49,11 +55,13 @@ pnpm start
 4. Recarga la página
 
 **Ejemplo - Cambiar teléfono:**
+
 ```json
 "phone": "0987157138"  ← Cambia este número
 ```
 
 **Ejemplo - Cambiar precio:**
+
 ```json
 "priceText": "Desde Gs. 80.000 por hora"  ← Cambia este texto
 ```
@@ -74,6 +82,7 @@ pnpm start
 **Archivo: `app/globals.css`**
 
 Busca las variables CSS:
+
 ```css
 --primary: #3EBEC8;     ← Color principal
 --secondary: #94C021;   ← Color secundario
@@ -98,13 +107,13 @@ Cambia los valores hexadecimales.
 
 ## Comandos Útiles
 
-| Comando | Descripción |
-|---------|-------------|
-| `pnpm dev` | Inicia servidor de desarrollo |
-| `pnpm build` | Genera versión de producción |
-| `pnpm start` | Inicia servidor de producción |
-| `pnpm lint` | Verifica errores de código |
-| `pnpm format` | Formatea el código |
+| Comando       | Descripción                   |
+| ------------- | ----------------------------- |
+| `pnpm dev`    | Inicia servidor de desarrollo |
+| `pnpm build`  | Genera versión de producción  |
+| `pnpm start`  | Inicia servidor de producción |
+| `pnpm lint`   | Verifica errores de código    |
+| `pnpm format` | Formatea el código            |
 
 ---
 
@@ -122,4 +131,4 @@ Ver archivo: `PROJECT_STATUS.md` → Sección "PRÓXIMOS PASOS RECOMENDADOS"
 
 ---
 
-*¡Tu landing page está lista para personalizarse!* 🎉
+_¡Tu landing page está lista para personalizarse!_ 🎉

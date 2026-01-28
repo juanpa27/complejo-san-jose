@@ -7,6 +7,7 @@
 **Más fácil y optimizado para Next.js**
 
 #### Opción A: Deploy desde GitHub
+
 1. Sube tu código a GitHub
 2. Ve a [vercel.com](https://vercel.com)
 3. Haz clic en "New Project"
@@ -15,6 +16,7 @@
 6. ¡Deploy automático!
 
 #### Opción B: Deploy con CLI
+
 ```bash
 # Instalar Vercel CLI globalmente
 npm i -g vercel
@@ -27,12 +29,14 @@ vercel --prod
 ```
 
 #### Configuración de Vercel
+
 - **Framework Preset**: Next.js
 - **Build Command**: `pnpm build`
 - **Output Directory**: `.next`
 - **Install Command**: `pnpm install`
 
 #### Variables de Entorno en Vercel
+
 1. Ve a tu proyecto en Vercel
 2. Settings → Environment Variables
 3. Agrega:
@@ -58,6 +62,7 @@ netlify deploy --prod
 ```
 
 **netlify.toml:**
+
 ```toml
 [build]
   command = "pnpm build"
@@ -89,14 +94,17 @@ netlify deploy --prod
 ## 🔧 Configuración de Dominio
 
 ### Dominio Sugerido
+
 `complejosanjose.com.py` o `complejosanjose.com`
 
 ### En Vercel:
+
 1. Settings → Domains
 2. Add domain
 3. Sigue las instrucciones DNS
 
 ### Configuración DNS (ejemplo):
+
 ```
 Type: A
 Name: @
@@ -108,7 +116,9 @@ Value: cname.vercel-dns.com
 ```
 
 ### Redireccionamiento www
+
 Decide entre:
+
 - `complejosanjose.com` → `www.complejosanjose.com`
 - `www.complejosanjose.com` → `complejosanjose.com`
 
@@ -163,6 +173,7 @@ Configura el canonical en `lib/seo.ts`
 ## 📊 Analytics (Opcional - Fase 2)
 
 ### Google Analytics 4
+
 1. Crea propiedad en [analytics.google.com](https://analytics.google.com)
 2. Obtén tu `GA4_ID` (G-XXXXXXXXXX)
 3. Agrega a `.env.local`:
@@ -172,6 +183,7 @@ Configura el canonical en `lib/seo.ts`
 4. Implementa en `app/layout.tsx` (código disponible en documentación)
 
 ### Meta Pixel (si harás ads)
+
 Similar a GA4, obtén pixel ID y agrega script.
 
 ---
@@ -179,6 +191,7 @@ Similar a GA4, obtén pixel ID y agrega script.
 ## 🐛 Troubleshooting
 
 ### Error: "Module not found"
+
 ```bash
 rm -rf node_modules .next
 pnpm install
@@ -186,10 +199,12 @@ pnpm build
 ```
 
 ### Error de Build en Vercel
+
 - Verifica que `pnpm-lock.yaml` esté en el repo
 - Asegúrate que `pnpm-workspace.yaml` esté presente
 
 ### Imágenes no cargan
+
 - Verifica que las rutas en `site.json` coincidan con `/public/images/`
 - Las rutas deben empezar con `/images/` (sin `public`)
 
@@ -198,6 +213,7 @@ pnpm build
 ## 📱 Contacto para Soporte
 
 Si tienes problemas con el deploy, revisa:
+
 1. Logs de build en tu plataforma
 2. Consola del navegador (F12)
 3. `pnpm build` localmente para reproducir
