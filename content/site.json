@@ -1,0 +1,169 @@
+{
+  "site": {
+    "name": "Complejo San José",
+    "city": "Caaguazú",
+    "phone": "0987157138",
+    "whatsapp": "595987157138",
+    "mapsUrl": "https://www.google.com/maps?q=GXJX+GJ3+Complejo+San+Jos%C3%A9,+Unnamed+Road,+Caaguaz%C3%BA",
+    "mapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.!2d-56.0!3d-25.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1",
+    "address": "Caaguazú, Paraguay",
+    "social": {
+      "facebook": "",
+      "instagram": ""
+    }
+  },
+  "hours": {
+    "weekdays": "Lunes a Viernes: 6:00 AM - 11:00 PM",
+    "weekend": "Sábados y Domingos: 7:00 AM - 11:00 PM",
+    "special": "Horarios especiales en feriados - consultar"
+  },
+  "benefits": [
+    "Instalaciones modernas y bien mantenidas",
+    "Amplio estacionamiento gratuito",
+    "Áreas de descanso climatizadas",
+    "Personal profesional y amable",
+    "Ambiente familiar y seguro",
+    "Excelente ubicación en Caaguazú"
+  ],
+  "services": [
+    {
+      "slug": "padel",
+      "title": "Canchas de Pádel Indoor",
+      "description": "2 canchas profesionales de pádel indoor con excelente iluminación y césped sintético de alta calidad",
+      "icon": "🎾",
+      "bullets": [
+        "2 canchas profesionales indoor",
+        "Iluminación LED de última generación",
+        "Césped sintético premium",
+        "Reservas por WhatsApp",
+        "Alquiler de paletas disponible"
+      ],
+      "priceText": "Desde Gs. 80.000 por hora",
+      "ctaMessage": "Hola, quiero consultar por reserva de cancha de pádel",
+      "gallery": ["/images/services/padel-1.webp", "/images/services/padel-2.webp"],
+      "featured": true
+    },
+    {
+      "slug": "piscina",
+      "title": "Piscina",
+      "description": "Amplia piscina ideal para toda la familia, con área para niños y adultos",
+      "icon": "🏊",
+      "bullets": [
+        "Piscina amplia y limpia",
+        "Área para niños",
+        "Duchas y vestuarios",
+        "Personal de seguridad",
+        "Reposeras y sombrillas"
+      ],
+      "priceText": "Consultar precios",
+      "ctaMessage": "Hola, quiero consultar por acceso a la piscina",
+      "gallery": ["/images/services/piscina-1.webp"],
+      "featured": true
+    },
+    {
+      "slug": "futbol",
+      "title": "Canchas de Fútbol y Vóley",
+      "description": "Canchas multiuso para fútbol y vóley, perfectas para eventos deportivos",
+      "icon": "⚽",
+      "bullets": [
+        "Canchas de fútbol 5 y 7",
+        "Cancha de vóley profesional",
+        "Iluminación nocturna",
+        "Césped sintético",
+        "Vestuarios disponibles"
+      ],
+      "priceText": "Desde Gs. 100.000 por hora",
+      "ctaMessage": "Hola, quiero consultar por reserva de cancha de fútbol/vóley",
+      "gallery": ["/images/services/futbol-1.webp"]
+    },
+    {
+      "slug": "pesca",
+      "title": "Pesque y Pague",
+      "description": "Área de pesca deportiva en un entorno natural y relajante",
+      "icon": "🎣",
+      "bullets": [
+        "Laguna bien poblada",
+        "Alquiler de equipos",
+        "Área de sombra",
+        "Preparación del pescado",
+        "Ambiente familiar"
+      ],
+      "priceText": "Consultar tarifas",
+      "ctaMessage": "Hola, quiero consultar sobre el pesque y pague",
+      "gallery": ["/images/services/pesca-1.webp"]
+    },
+    {
+      "slug": "quinchos",
+      "title": "Quinchos y Parrilleros",
+      "description": "Espacios techados con parrilleros para eventos y reuniones familiares",
+      "icon": "🏠",
+      "bullets": [
+        "Quinchos techados",
+        "Parrilleros equipados",
+        "Mesas y sillas",
+        "Conexión eléctrica",
+        "Ideal para eventos"
+      ],
+      "priceText": "Desde Gs. 150.000 por día",
+      "ctaMessage": "Hola, quiero consultar por alquiler de quincho",
+      "gallery": ["/images/services/quincho-1.webp"],
+      "featured": true
+    }
+  ],
+  "promos": [
+    {
+      "id": "promo-verano-2026",
+      "title": "Promo Verano 2026",
+      "description": "Reserva 3 horas de cancha y obtén 1 hora gratis",
+      "discount": "25% OFF",
+      "validUntil": "2026-03-31",
+      "terms": ["Válido de lunes a viernes", "No acumulable con otras promociones"]
+    }
+  ],
+  "faq": [
+    {
+      "question": "¿Cómo puedo hacer una reserva?",
+      "answer": "Puedes reservar por WhatsApp al 0987 157 138 o directamente en nuestras instalaciones.",
+      "category": "reservas"
+    },
+    {
+      "question": "¿Se requiere seña para reservar?",
+      "answer": "Sí, solicitamos una seña del 50% para confirmar tu reserva.",
+      "category": "reservas"
+    },
+    {
+      "question": "¿Cuál es la política de cancelación?",
+      "answer": "Cancela con al menos 24 horas de anticipación para obtener reembolso completo de la seña.",
+      "category": "reservas"
+    },
+    {
+      "question": "¿Hay estacionamiento disponible?",
+      "answer": "Sí, contamos con amplio estacionamiento gratuito para todos nuestros visitantes.",
+      "category": "instalaciones"
+    },
+    {
+      "question": "¿Puedo llevar mi propia comida y bebida?",
+      "answer": "Sí, puedes traer tu comida y bebida. También tenemos opciones de refrigerios disponibles.",
+      "category": "servicios"
+    },
+    {
+      "question": "¿Los niños pueden acceder a todas las áreas?",
+      "answer": "Los niños son bienvenidos. La piscina tiene área especial para niños con supervisión requerida de adultos.",
+      "category": "familias"
+    }
+  ],
+  "seo": {
+    "title": "Complejo San José Caaguazú | Pádel, Piscina, Fútbol, Pesque y Pague",
+    "description": "Complejo deportivo y recreativo en Caaguazú. Canchas de pádel indoor, piscina, fútbol, vóley, pesque y pague, quinchos. ¡Reserva ahora por WhatsApp!",
+    "keywords": [
+      "complejo deportivo caaguazú",
+      "pádel caaguazú",
+      "piscina caaguazú",
+      "cancha de fútbol caaguazú",
+      "pesque y pague caaguazú",
+      "quincho caaguazú",
+      "complejo san josé"
+    ],
+    "ogImage": "/images/brand/og-image.jpg"
+  }
+}

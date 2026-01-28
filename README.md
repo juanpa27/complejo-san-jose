@@ -1,36 +1,157 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Complejo San José - Landing Page
 
-## Getting Started
+Landing page profesional para **Complejo San José** en Caaguazú, Paraguay. Diseñada con enfoque mobile-first, optimizada para conversión a WhatsApp y SEO local.
 
-First, run the development server:
+## 🚀 Stack Tecnológico
+
+- **Framework**: Next.js 16 (App Router)
+- **Lenguaje**: TypeScript (modo estricto)
+- **Estilos**: Tailwind CSS 4
+- **Gestión de paquetes**: pnpm
+- **Lint & Format**: ESLint + Prettier
+- **Deployment**: Vercel (recomendado)
+
+## 📋 Requisitos
+
+- Node.js 22+ LTS
+- pnpm 10+
+
+## 🛠️ Instalación
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Clonar repositorio
+git clone <url-del-repositorio>
+cd complejosanjose
+
+# Instalar dependencias
+pnpm install
+
+# Copiar variables de entorno
+cp .env.example .env.local
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🧑‍💻 Desarrollo
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Modo desarrollo con Turbopack
+pnpm dev
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Type checking
+pnpm type-check
 
-## Learn More
+# Lint
+pnpm lint
 
-To learn more about Next.js, take a look at the following resources:
+# Format
+pnpm format
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🏗️ Build y Producción
 
-## Deploy on Vercel
+```bash
+# Build de producción
+pnpm build
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Iniciar servidor de producción
+pnpm start
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📁 Estructura del Proyecto
+
+```
+complejosanjose/
+├── app/                    # App Router de Next.js
+│   ├── layout.tsx         # Layout principal con SEO
+│   ├── page.tsx           # Página de inicio
+│   ├── robots.ts          # Configuración de robots
+│   └── sitemap.ts         # Sitemap dinámico
+├── components/
+│   ├── header/            # Componentes de encabezado
+│   ├── sections/          # Secciones de la landing
+│   └── ui/                # Componentes UI reutilizables
+│       ├── button.tsx
+│       ├── container.tsx
+│       └── section.tsx
+├── content/
+│   └── site.json          # Source of truth del contenido
+├── lib/
+│   ├── content.ts         # Helpers para leer contenido
+│   └── seo.ts             # Utilidades de SEO
+├── types/
+│   └── content.ts         # Tipos TypeScript
+├── public/
+│   └── images/
+│       ├── brand/         # Logo y assets de marca
+│       ├── hero/          # Imágenes del hero
+│       ├── services/      # Imágenes de servicios
+│       └── gallery/       # Galería
+└── CLAUDE.md              # Documentación detallada del proyecto
+```
+
+## 🎨 Paleta de Colores
+
+Basada en el branding del Complejo San José:
+
+- **Primary (Teal)**: `#3EBEC8`
+- **Secondary (Verde)**: `#94C021`
+- **Accent Yellow**: `#FFEC01`
+- **Accent Orange**: `#F9B834`
+- **Ink (Texto)**: `#1E1C17`
+- **Sky**: `#70B3E8`
+
+## 📝 Editar Contenido
+
+Todo el contenido del sitio se gestiona desde un único archivo JSON:
+
+**`content/site.json`**
+
+Edita este archivo para cambiar:
+- Información del complejo
+- Servicios y precios
+- Horarios
+- FAQs
+- Promociones
+- Metadata SEO
+
+Los tipos TypeScript aseguran que el contenido sea válido.
+
+## 🔄 Próximos Pasos (Post-MVP)
+
+1. **Fase 2**: Migrar contenido a Supabase
+2. **Fase 3**: Sistema de reservas online
+3. **Fase 4**: Panel de administración
+4. **Fase 5**: Galería interactiva con lightbox
+
+Ver `CLAUDE.md` para roadmap completo.
+
+## 📱 SEO & Performance
+
+- ✅ Metadata completa (OpenGraph, Twitter Cards)
+- ✅ Schema.org (LocalBusiness/SportsActivityLocation)
+- ✅ Sitemap.xml automático
+- ✅ Robots.txt configurado
+- ✅ Mobile-first responsive
+- ✅ Imágenes optimizadas (next/image)
+
+## 🚀 Deploy en Vercel
+
+1. Conecta tu repositorio a Vercel
+2. Configura las variables de entorno
+3. Deploy automático en cada push
+
+```bash
+# O deploy manual
+vercel
+```
+
+## 📞 Contacto
+
+**Complejo San José**
+- WhatsApp: 0987 157 138
+- Ubicación: Caaguazú, Paraguay
+
+---
+
+**Desarrollado con ❤️ usando Next.js y TypeScript**
