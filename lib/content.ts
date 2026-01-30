@@ -10,6 +10,13 @@ export function getSiteConfig(): SiteConfig {
 }
 
 /**
+ * Alias para getSiteConfig (para compatibilidad)
+ */
+export function getContent(): SiteConfig {
+  return getSiteConfig();
+}
+
+/**
  * Obtiene un servicio específico por slug
  */
 export function getServiceBySlug(slug: string) {

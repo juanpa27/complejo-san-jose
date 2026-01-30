@@ -1,7 +1,10 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://complejosanjose.com.py";
+  const baseUrl =
+    process.env.NEXT_PUBLIC_PRODUCTION_URL ||
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    "https://complejosanjose.com.py";
 
   return [
     {

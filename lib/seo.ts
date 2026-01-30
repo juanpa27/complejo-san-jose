@@ -7,15 +7,20 @@ import { getSiteConfig } from "@/lib/content";
 export function generateSEOMetadata(overrides?: Partial<Metadata>): Metadata {
   const config = getSiteConfig();
   const { seo, site } = config;
+  const baseUrl =
+    process.env.NEXT_PUBLIC_PRODUCTION_URL || process.env.NEXT_PUBLIC_SITE_URL || site.url;
 
   const metadata: Metadata = {
-    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
+    metadataBase: new URL(baseUrl),
     title: seo.title,
     description: seo.description,
     keywords: seo.keywords,
     authors: [{ name: site.name }],
     creator: site.name,
     publisher: site.name,
+    alternates: {
+      canonical: "/",
+    },
     robots: {
       index: true,
       follow: true,
@@ -30,13 +35,13 @@ export function generateSEOMetadata(overrides?: Partial<Metadata>): Metadata {
     openGraph: {
       type: "website",
       locale: "es_PY",
-      url: "/",
+      url: baseUrl,
       title: seo.title,
       description: seo.description,
       siteName: site.name,
       images: [
         {
-          url: seo.ogImage,
+          url: `${baseUrl}${seo.ogImage}`,
           width: 1200,
           height: 630,
           alt: `${site.name} - ${site.city}`,
@@ -47,7 +52,7 @@ export function generateSEOMetadata(overrides?: Partial<Metadata>): Metadata {
       card: "summary_large_image",
       title: seo.title,
       description: seo.description,
-      images: [seo.ogImage],
+      images: [`${baseUrl}${seo.ogImage}`],
     },
     ...overrides,
   };
@@ -61,14 +66,19 @@ export function generateSEOMetadata(overrides?: Partial<Metadata>): Metadata {
 export function generateLocalBusinessSchema() {
   const config = getSiteConfig();
   const { site, hours } = config;
+  const baseUrl =
+    process.env.NEXT_PUBLIC_PRODUCTION_URL || process.env.NEXT_PUBLIC_SITE_URL || site.url;
 
   return {
     "@context": "https://schema.org",
     "@type": "SportsActivityLocation",
+    "@id": `${baseUrl}#organization`,
     name: site.name,
     description: config.seo.description,
-    image: config.seo.ogImage,
+    image: `${baseUrl}${config.seo.ogImage}`,
+    url: baseUrl,
     telephone: site.phone,
+    email: site.email,
     address: {
       "@type": "PostalAddress",
       addressLocality: site.city,
@@ -76,10 +86,10 @@ export function generateLocalBusinessSchema() {
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: "-25.5",
-      longitude: "-56.0",
+      latitude: site.geo.latitude,
+      longitude: site.geo.longitude,
     },
-    url: "/",
+    hasMap: site.mapsUrl,
     openingHours: [hours.weekdays, hours.weekend],
     priceRange: "$$",
     sameAs: Object.values(site.social).filter(Boolean),

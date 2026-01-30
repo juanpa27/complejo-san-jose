@@ -1,15 +1,21 @@
 {
   "site": {
     "name": "Complejo San José",
+    "url": "https://complejosanjose.com.py",
     "city": "Caaguazú",
     "phone": "0987157138",
     "whatsapp": "595987157138",
+    "email": "info@complejosanjose.com.py",
     "mapsUrl": "https://www.google.com/maps?q=GXJX+GJ3+Complejo+San+Jos%C3%A9,+Unnamed+Road,+Caaguaz%C3%BA",
-    "mapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.!2d-56.0!3d-25.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1",
+    "mapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.087854812698!2d-56.000968!3d-25.468741700000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945f3d7b191c7287%3A0x1c0aad7ec6dbb24d!2sComplejo%20San%20Jos%C3%A9!5e0!3m2!1ses-419!2spy!4v1769780660324!5m2!1ses-419!2spy",
     "address": "Caaguazú, Paraguay",
+    "geo": {
+      "latitude": "-25.468741",
+      "longitude": "-56.000968"
+    },
     "social": {
-      "facebook": "",
-      "instagram": ""
+      "facebook": "https://www.facebook.com/complejosanjoseczu",
+      "instagram": "https://www.instagram.com/complejosanjose_czu/?hl=es"
     }
   },
   "hours": {
@@ -20,7 +26,6 @@
   "benefits": [
     "Instalaciones modernas y bien mantenidas",
     "Amplio estacionamiento gratuito",
-    "Áreas de descanso climatizadas",
     "Personal profesional y amable",
     "Ambiente familiar y seguro",
     "Excelente ubicación en Caaguazú"
@@ -29,7 +34,7 @@
     {
       "slug": "padel",
       "title": "Canchas de Pádel Indoor",
-      "description": "2 canchas profesionales de pádel indoor con excelente iluminación y césped sintético de alta calidad",
+      "description": "Canchas profesionales con iluminación LED y césped premium",
       "icon": "🎾",
       "bullets": [
         "2 canchas profesionales indoor",
@@ -38,15 +43,16 @@
         "Reservas por WhatsApp",
         "Alquiler de paletas disponible"
       ],
-      "priceText": "Desde Gs. 80.000 por hora",
+      "priceText": "Desde Gs. 50.000 por hora",
       "ctaMessage": "Hola, quiero consultar por reserva de cancha de pádel",
+      "ctaMobile": "Ver disponibilidad",
       "gallery": ["/images/services/padel-1.webp", "/images/services/padel-2.webp"],
       "featured": true
     },
     {
       "slug": "piscina",
       "title": "Piscina",
-      "description": "Amplia piscina ideal para toda la familia, con área para niños y adultos",
+      "description": "Piscina amplia para toda la familia con áreas diferenciadas",
       "icon": "🏊",
       "bullets": [
         "Piscina amplia y limpia",
@@ -57,13 +63,14 @@
       ],
       "priceText": "Consultar precios",
       "ctaMessage": "Hola, quiero consultar por acceso a la piscina",
+      "ctaMobile": "Hablar por WhatsApp",
       "gallery": ["/images/services/piscina-1.webp"],
       "featured": true
     },
     {
       "slug": "futbol",
       "title": "Canchas de Fútbol y Vóley",
-      "description": "Canchas multiuso para fútbol y vóley, perfectas para eventos deportivos",
+      "description": "Canchas multiuso perfectas para eventos deportivos",
       "icon": "⚽",
       "bullets": [
         "Canchas de fútbol 5 y 7",
@@ -74,12 +81,14 @@
       ],
       "priceText": "Desde Gs. 100.000 por hora",
       "ctaMessage": "Hola, quiero consultar por reserva de cancha de fútbol/vóley",
-      "gallery": ["/images/services/futbol-1.webp"]
+      "ctaMobile": "Reservar turno",
+      "gallery": ["/images/services/futbol-1.webp"],
+      "featured": false
     },
     {
       "slug": "pesca",
       "title": "Pesque y Pague",
-      "description": "Área de pesca deportiva en un entorno natural y relajante",
+      "description": "Pesca deportiva en un entorno natural y tranquilo",
       "icon": "🎣",
       "bullets": [
         "Laguna bien poblada",
@@ -90,24 +99,27 @@
       ],
       "priceText": "Consultar tarifas",
       "ctaMessage": "Hola, quiero consultar sobre el pesque y pague",
-      "gallery": ["/images/services/pesca-1.webp"]
+      "ctaMobile": "Consultar",
+      "gallery": ["/images/services/pesca-1.webp"],
+      "featured": false
     },
     {
       "slug": "quinchos",
-      "title": "Quinchos y Parrilleros",
-      "description": "Espacios techados con parrilleros para eventos y reuniones familiares",
+      "title": "Quinchos",
+      "description": "Espacios equipados ideales para eventos y reuniones",
       "icon": "🏠",
       "bullets": [
         "Quinchos techados",
-        "Parrilleros equipados",
+        "Parrillas equipadas",
         "Mesas y sillas",
         "Conexión eléctrica",
         "Ideal para eventos"
       ],
       "priceText": "Desde Gs. 150.000 por día",
       "ctaMessage": "Hola, quiero consultar por alquiler de quincho",
+      "ctaMobile": "Ver precios",
       "gallery": ["/images/services/quincho-1.webp"],
-      "featured": true
+      "featured": false
     }
   ],
   "promos": [
@@ -128,23 +140,13 @@
     },
     {
       "question": "¿Se requiere seña para reservar?",
-      "answer": "Sí, solicitamos una seña del 50% para confirmar tu reserva.",
-      "category": "reservas"
-    },
-    {
-      "question": "¿Cuál es la política de cancelación?",
-      "answer": "Cancela con al menos 24 horas de anticipación para obtener reembolso completo de la seña.",
+      "answer": "No, no solicitamos una seña del para confirmar tu reserva.",
       "category": "reservas"
     },
     {
       "question": "¿Hay estacionamiento disponible?",
       "answer": "Sí, contamos con amplio estacionamiento gratuito para todos nuestros visitantes.",
       "category": "instalaciones"
-    },
-    {
-      "question": "¿Puedo llevar mi propia comida y bebida?",
-      "answer": "Sí, puedes traer tu comida y bebida. También tenemos opciones de refrigerios disponibles.",
-      "category": "servicios"
     },
     {
       "question": "¿Los niños pueden acceder a todas las áreas?",
@@ -164,6 +166,47 @@
       "quincho caaguazú",
       "complejo san josé"
     ],
-    "ogImage": "/images/brand/og-image.jpg"
+    "ogImage": "/images/og.png"
+  },
+  "content": {
+    "hero": {
+      "title": "San José",
+      "subtitle": "Tu destino recreativo y deportivo en",
+      "location": "Caaguazú, Paraguay",
+      "tagline": "Deportes, piscina y recreación en un solo lugar",
+      "features": ["Pádel Indoor", "Piscina", "Fútbol", "Pesque y Pague", "Quinchos"],
+      "ctaPrimary": "Reservar ahora",
+      "ctaSecondary": "Ver Servicios"
+    },
+    "services": {
+      "badge": "Nuestros Servicios",
+      "title": "Todo lo que necesitas para",
+      "titleHighlight": "disfrutar",
+      "subtitle": "Descubre nuestras instalaciones de primera calidad, diseñadas para brindarte la mejor experiencia deportiva y recreativa"
+    },
+    "benefits": {
+      "badge": "Por qué elegirnos",
+      "title": "La mejor experiencia en",
+      "titleHighlight": "Caaguazú",
+      "subtitle": "Nos dedicamos a brindarte el mejor servicio con instalaciones de primera calidad y un equipo comprometido con tu bienestar"
+    },
+    "hours": {
+      "badge": "Horarios",
+      "title": "Abierto toda la semana",
+      "subtitle": "Horarios flexibles para que disfrutes cuando más te convenga"
+    },
+    "location": {
+      "badge": "Ubicación",
+      "title": "Fácil de",
+      "titleHighlight": "encontrar",
+      "subtitle": "Ubicados en Caaguazú con amplio estacionamiento y fácil acceso",
+      "cta": "Cómo llegar"
+    },
+    "faq": {
+      "badge": "Preguntas Frecuentes",
+      "title": "¿Tienes alguna",
+      "titleHighlight": "duda?",
+      "subtitle": "Aquí respondemos las preguntas más comunes de nuestros visitantes"
+    }
   }
 }
