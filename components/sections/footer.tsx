@@ -42,7 +42,7 @@ export function Footer() {
                 />
               </div>
               <div>
-                <h3 className="font-bold text-xl text-white">{content.site.name.split(" ")[1]}</h3>
+                <h3 className="font-bold text-xl text-white">{content.site.name}</h3>
                 <p className="text-xs uppercase tracking-widest text-cyan-400">
                   Complejo Deportivo
                 </p>

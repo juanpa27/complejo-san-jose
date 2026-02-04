@@ -209,14 +209,14 @@ export function Services() {
                     ))}
                   </ul>
 
-                  {/* Bot\u00f3n "Ver m\u00e1s" solo en mobile */}
+                  {/* Botón "Ver más" solo en mobile */}
                   {service.bullets.length > 2 && !isExpanded && (
                     <button
                       onClick={() => setIsExpanded(true)}
                       className="md:hidden text-sm text-cyan-600 font-medium flex items-center gap-1 mb-4 hover:text-cyan-700"
                       aria-label={`Ver más detalles de ${service.title}`}
                     >
-                      Ver m\u00e1s <ChevronDown className="w-4 h-4" />
+                      Ver más <ChevronDown className="w-4 h-4" />
                     </button>
                   )}
 

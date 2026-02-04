@@ -202,10 +202,10 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
+      {/* Scroll indicator - oculto en mobile para evitar solapamiento */}
       <button
         onClick={scrollToServices}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 text-white animate-bounce cursor-pointer"
+        className="hidden md:block absolute bottom-8 left-1/2 -translate-x-1/2 z-20 text-white animate-bounce cursor-pointer"
         aria-label="Scroll down"
       >
         <div className="flex flex-col items-center gap-2">
