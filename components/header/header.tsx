@@ -138,7 +138,7 @@ export function Header() {
         {/* Mobile Menu */}
         <div
           className={`lg:hidden overflow-hidden transition-all duration-300 ${
-            isMobileMenuOpen ? "max-h-96" : "max-h-0"
+            isMobileMenuOpen ? "max-h-[500px]" : "max-h-0"
           }`}
         >
           <div

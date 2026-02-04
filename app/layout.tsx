@@ -29,6 +29,7 @@ export default function RootLayout({
   return (
     <html lang="es" className="scroll-smooth">
       <head>
+        <meta charSet="utf-8" />
         {/* Favicon */}
         <link rel="icon" href="/images/favicon.ico" sizes="any" />
         <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />

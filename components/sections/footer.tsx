@@ -17,7 +17,7 @@ const quickLinks = [
 export function Footer() {
   const content = getContent();
   return (
-    <footer className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
+    <footer className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden pb-20 md:pb-0">
       {/* Water wave at top */}
       <div className="absolute top-0 left-0 right-0 h-16 overflow-hidden">
         <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full">
