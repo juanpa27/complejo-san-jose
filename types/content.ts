@@ -108,6 +108,7 @@ export interface BenefitsContent {
 export interface HoursContent {
   badge: string;
   title: string;
+  titleHighlight?: string;
   subtitle: string;
 }
 
