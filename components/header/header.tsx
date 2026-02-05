@@ -52,11 +52,17 @@ export function Header() {
       {/* Main header */}
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? "bg-gray-800/70 shadow-2xl border-b border-white/20" : "bg-white shadow-sm"
+          isScrolled ? "bg-gray-800/60 shadow-2xl" : "bg-white shadow-sm"
         }`}
         style={
           isScrolled
-            ? { backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)" }
+            ? {
+                backdropFilter: "blur(30px)",
+                WebkitBackdropFilter: "blur(30px)",
+                borderBottom: "1px solid rgba(6, 182, 212, 0.3)",
+                boxShadow:
+                  "0 4px 30px rgba(6, 182, 212, 0.15), inset 0 -1px 0 rgba(6, 182, 212, 0.4)",
+              }
             : undefined
         }
       >
@@ -69,6 +75,7 @@ export function Header() {
                   src="/images/logo.webp"
                   alt="Complejo San José"
                   fill
+                  sizes="56px"
                   className="object-contain"
                 />
               </div>

@@ -56,7 +56,7 @@ export function Benefits() {
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 text-balance">
             {benefitsContent.title}{" "}
-            <span className="text-cyan-600">{benefitsContent.titleHighlight}</span>
+            <span className="text-green-600">{benefitsContent.titleHighlight}</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto text-pretty">
             {benefitsContent.subtitle}

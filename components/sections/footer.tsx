@@ -38,6 +38,7 @@ export function Footer() {
                   src="/images/logo.webp"
                   alt={content.site.name}
                   fill
+                  sizes="56px"
                   className="object-contain"
                 />
               </div>

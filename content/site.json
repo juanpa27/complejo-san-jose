@@ -19,8 +19,8 @@
     }
   },
   "hours": {
-    "weekdays": "Lunes a Viernes: 6:00 AM - 11:00 PM",
-    "weekend": "Sábados y Domingos: 7:00 AM - 11:00 PM",
+    "weekdays": "Lunes a Viernes: 9:00 AM - 10:00 PM",
+    "weekend": "Sábados y Domingos: 8:00 AM - 11:00 PM",
     "special": "Horarios especiales en feriados - consultar"
   },
   "benefits": [
@@ -46,7 +46,13 @@
       "priceText": "Desde Gs. 50.000 por hora",
       "ctaMessage": "Hola, quiero consultar por reserva de cancha de pádel",
       "ctaMobile": "Ver disponibilidad",
-      "gallery": ["/images/services/padel-1.webp", "/images/services/padel-2.webp"],
+      "cardImage": "/images/services/padel/cards/padel-card-06.webp",
+      "gallery": [
+        "/images/services/padel/gallery/padel-gallery-06.webp",
+        "/images/services/padel/gallery/padel-gallery-07.webp",
+        "/images/services/padel/gallery/padel-gallery-08.webp",
+        "/images/services/padel/gallery/padel-gallery-10.webp"
+      ],
       "featured": true
     },
     {
@@ -64,7 +70,15 @@
       "priceText": "Consultar precios",
       "ctaMessage": "Hola, quiero consultar por acceso a la piscina",
       "ctaMobile": "Hablar por WhatsApp",
-      "gallery": ["/images/services/piscina-1.webp"],
+      "cardImage": "/images/services/piscina/cards/piscina-card-03.webp",
+      "gallery": [
+        "/images/services/piscina/gallery/piscina-gallery-03.webp",
+        "/images/services/piscina/gallery/piscina-gallery-06.webp",
+        "/images/services/piscina/gallery/piscina-gallery-07.webp",
+        "/images/services/piscina/gallery/piscina-gallery-11.webp",
+        "/images/services/piscina/gallery/piscina-gallery-14.webp",
+        "/images/services/piscina/gallery/piscina-gallery-15.webp"
+      ],
       "featured": true
     },
     {
@@ -82,7 +96,23 @@
       "priceText": "Desde Gs. 100.000 por hora",
       "ctaMessage": "Hola, quiero consultar por reserva de cancha de fútbol/vóley",
       "ctaMobile": "Reservar turno",
-      "gallery": ["/images/services/futbol-1.webp"],
+      "cardImage": "/images/services/futbol-tirolesa/cards/futbol-tirolesa-card-01.webp",
+      "gallery": [
+        "/images/services/futbol-tirolesa/gallery/futbol-tirolesa-gallery-01.webp",
+        "/images/services/futbol-tirolesa/gallery/futbol-tirolesa-gallery-02.webp",
+        "/images/services/futbol-tirolesa/gallery/futbol-tirolesa-gallery-03.webp",
+        "/images/services/futbol-tirolesa/gallery/futbol-tirolesa-gallery-04.webp",
+        "/images/services/futbol-tirolesa/gallery/futbol-tirolesa-gallery-05.webp",
+        "/images/services/futbol-tirolesa/gallery/futbol-tirolesa-gallery-06.webp",
+        "/images/services/futbol-tirolesa/gallery/futbol-tirolesa-gallery-07.webp",
+        "/images/services/futbol-tirolesa/gallery/futbol-tirolesa-gallery-08.webp",
+        "/images/services/futbol-tirolesa/gallery/futbol-tirolesa-gallery-09.webp",
+        "/images/services/futbol-tirolesa/gallery/futbol-tirolesa-gallery-10.webp",
+        "/images/services/futbol-tirolesa/gallery/futbol-tirolesa-gallery-11.webp",
+        "/images/services/futbol-tirolesa/gallery/futbol-tirolesa-gallery-12.webp",
+        "/images/services/futbol-tirolesa/gallery/futbol-tirolesa-gallery-13.webp",
+        "/images/services/futbol-tirolesa/gallery/futbol-tirolesa-gallery-14.webp"
+      ],
       "featured": false
     },
     {
@@ -100,7 +130,15 @@
       "priceText": "Consultar tarifas",
       "ctaMessage": "Hola, quiero consultar sobre el pesque y pague",
       "ctaMobile": "Consultar",
-      "gallery": ["/images/services/pesca-1.webp"],
+      "cardImage": "/images/services/pesca/cards/pesca-card-01.webp",
+      "gallery": [
+        "/images/services/pesca/gallery/pesca-gallery-01.webp",
+        "/images/services/pesca/gallery/pesca-gallery-02.webp",
+        "/images/services/pesca/gallery/pesca-gallery-13.webp",
+        "/images/services/pesca/gallery/pesca-gallery-14.webp",
+        "/images/services/pesca/gallery/pesca-gallery-16.webp",
+        "/images/services/pesca/gallery/pesca-gallery-17.webp"
+      ],
       "featured": false
     },
     {
@@ -118,7 +156,34 @@
       "priceText": "Desde Gs. 150.000 por día",
       "ctaMessage": "Hola, quiero consultar por alquiler de quincho",
       "ctaMobile": "Ver precios",
-      "gallery": ["/images/services/quincho-1.webp"],
+      "cardImage": "/images/services/quinchos/cards/quinchos-card-01.webp",
+      "gallery": [],
+      "featured": false
+    },
+    {
+      "slug": "bungalows",
+      "title": "Bungalows",
+      "description": "Alojamiento cómodo rodeado de naturaleza",
+      "icon": "🏡",
+      "bullets": [
+        "Cabañas equipadas",
+        "Ambiente tranquilo",
+        "Descanso total",
+        "Ideal para familias",
+        "Estacionamiento privado"
+      ],
+      "priceText": "Consultar tarifas",
+      "ctaMessage": "Hola, quiero consultar por alquiler de bungalow",
+      "ctaMobile": "Consultar",
+      "cardImage": "/images/services/bungalows/cards/bungalows-card-10.webp",
+      "gallery": [
+        "/images/services/bungalows/gallery/bungalows-gallery-10.webp",
+        "/images/services/bungalows/gallery/bungalows-gallery-12.webp",
+        "/images/services/bungalows/gallery/bungalows-gallery-09.webp",
+        "/images/services/bungalows/gallery/bungalows-gallery-13.webp",
+        "/images/services/bungalows/gallery/bungalows-gallery-16.webp",
+        "/images/services/bungalows/gallery/bungalows-gallery-14.webp"
+      ],
       "featured": false
     }
   ],
@@ -204,7 +269,7 @@
     },
     "faq": {
       "badge": "Preguntas Frecuentes",
-      "title": "¿Tienes alguna",
+      "title": "¿Tenés alguna",
       "titleHighlight": "duda?",
       "subtitle": "Aquí respondemos las preguntas más comunes de nuestros visitantes"
     }

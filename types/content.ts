@@ -45,6 +45,7 @@ export interface Service {
   priceText: string;
   ctaMessage: string;
   ctaMobile: string;
+  cardImage: string;
   gallery: string[];
   featured?: boolean;
 }

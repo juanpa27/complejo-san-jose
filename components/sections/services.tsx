@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { ChevronRight, ChevronDown } from "lucide-react";
+import Image from "next/image";
+import { ChevronRight, ChevronDown, Camera } from "lucide-react";
 import {
   GiTennisRacket,
   GiTennisBall,
@@ -13,9 +14,12 @@ import {
   GiFishingNet,
   GiSteak,
   GiBarbecue,
+  GiWoodCabin,
+  GiCampfire,
 } from "react-icons/gi";
 import { IconType } from "react-icons";
 import { Button } from "@/components/ui/button";
+import { ImageGalleryModal } from "@/components/ui/image-gallery-modal";
 import { getContent } from "@/lib/content";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -55,6 +59,11 @@ const servicesUIConfig: Record<string, ServiceUIConfig> = {
     iconRight: GiSteak,
     gradient: "from-orange-500 to-amber-500",
   },
+  bungalows: {
+    iconLeft: GiWoodCabin,
+    iconRight: GiCampfire,
+    gradient: "from-amber-600 to-orange-600",
+  },
 };
 
 export function Services() {
@@ -63,6 +72,15 @@ export function Services() {
   const services = content.services;
   const sectionRef = useRef<HTMLElement>(null);
   const cardsRef = useRef<HTMLDivElement[]>([]);
+  const [galleryState, setGalleryState] = useState<{
+    isOpen: boolean;
+    images: string[];
+    serviceTitle: string;
+  }>({
+    isOpen: false,
+    images: [],
+    serviceTitle: "",
+  });
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -138,9 +156,7 @@ export function Services() {
         {/* Services grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => {
-            const uiConfig = servicesUIConfig[service.slug];
-            const IconLeft = uiConfig.iconLeft;
-            const IconRight = uiConfig.iconRight;
+            const uiConfig = servicesUIConfig[service.slug] || servicesUIConfig.piscina; // Fallback
             const [isExpanded, setIsExpanded] = useState(false);
 
             return (
@@ -149,7 +165,7 @@ export function Services() {
                 ref={(el) => {
                   if (el) cardsRef.current[index] = el;
                 }}
-                className={`group relative bg-white rounded-3xl overflow-hidden shadow-xl transition-all duration-500 active:scale-98 lg:hover:shadow-2xl lg:hover:-translate-y-2 lg:hover:scale-105 ${
+                className={`group relative bg-white rounded-3xl overflow-hidden shadow-xl transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 ${
                   service.featured
                     ? "ring-2 ring-yellow-400 ring-offset-2 ring-offset-cyan-600"
                     : ""
@@ -162,23 +178,36 @@ export function Services() {
                   </div>
                 )}
 
-                {/* Iconos decorativos grandes en las esquinas */}
-                <div className="absolute top-4 left-4 z-20 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
-                  <IconLeft className="w-24 h-24 text-white drop-shadow-lg" />
-                </div>
-                <div className="absolute top-4 right-4 z-20 opacity-15 group-hover:opacity-25 transition-opacity duration-300">
-                  <IconRight className="w-24 h-24 text-white drop-shadow-lg" />
-                </div>
-
-                {/* Card header with gradient - altura reducida */}
-                <div
-                  className={`relative h-28 bg-linear-to-br ${uiConfig.gradient} overflow-hidden`}
+                {/* Header con imagen real */}
+                <button
+                  onClick={() => {
+                    const validGallery = service.gallery.filter((img) => img && img.trim() !== "");
+                    if (validGallery.length > 0) {
+                      setGalleryState({
+                        isOpen: true,
+                        images: validGallery,
+                        serviceTitle: service.title,
+                      });
+                    }
+                  }}
+                  className="relative w-full aspect-[16/10] overflow-hidden cursor-pointer"
+                  aria-label={`Ver fotos de ${service.title}`}
                 >
-                  {/* Glassmorphism effect */}
-                  <div className="absolute inset-0 bg-white/10" />
-                  <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-white/10 rounded-full" />
-                  <div className="absolute -top-8 -left-8 w-24 h-24 bg-white/10 rounded-full" />
-                </div>
+                  <Image
+                    src={service.cardImage}
+                    alt={service.title}
+                    fill
+                    sizes="(max-width: 640px) 92vw, (max-width: 1024px) 45vw, 360px"
+                    className="object-cover transition-transform duration-300 hover:scale-105"
+                  />
+                  {/* Overlay "Ver fotos" discreto */}
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent pt-12 pb-3 px-4 opacity-90 md:opacity-0 md:group-hover:opacity-90 transition-opacity duration-300">
+                    <div className="flex items-center justify-center gap-2 text-white text-sm font-medium">
+                      <Camera className="w-4 h-4" />
+                      <span>Ver fotos</span>
+                    </div>
+                  </div>
+                </button>
 
                 {/* Card content */}
                 <div className="p-6">
@@ -259,6 +288,14 @@ export function Services() {
           })}
         </div>
       </div>
+
+      {/* Modal de galería */}
+      <ImageGalleryModal
+        images={galleryState.images}
+        isOpen={galleryState.isOpen}
+        onClose={() => setGalleryState({ ...galleryState, isOpen: false })}
+        serviceTitle={galleryState.serviceTitle}
+      />
     </section>
   );
 }

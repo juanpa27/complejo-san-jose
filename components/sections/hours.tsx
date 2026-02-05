@@ -1,35 +1,39 @@
-"use client"
+"use client";
 
-import { useEffect, useRef } from "react"
-import { Clock, Calendar, Info } from "lucide-react"
-import gsap from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { useEffect, useRef } from "react";
+import { Clock, Calendar, Info } from "lucide-react";
+import { getContent } from "@/lib/content";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger)
-
-const schedule = [
-  {
-    icon: Clock,
-    label: "Lunes a Viernes",
-    time: "6:00 AM - 11:00 PM",
-    highlight: false,
-  },
-  {
-    icon: Calendar,
-    label: "Sábados y Domingos",
-    time: "7:00 AM - 11:00 PM",
-    highlight: true,
-  },
-  {
-    icon: Info,
-    label: "Feriados",
-    time: "Horarios especiales - consultar",
-    highlight: false,
-  },
-]
+gsap.registerPlugin(ScrollTrigger);
 
 export function Hours() {
-  const sectionRef = useRef<HTMLElement>(null)
+  const sectionRef = useRef<HTMLElement>(null);
+  const content = getContent();
+  const hoursContent = content.content.hours;
+  const hours = content.hours;
+
+  const schedule = [
+    {
+      icon: Clock,
+      label: "Lunes a Viernes",
+      time: hours.weekdays,
+      highlight: false,
+    },
+    {
+      icon: Calendar,
+      label: "Sábados y Domingos",
+      time: hours.weekend,
+      highlight: true,
+    },
+    {
+      icon: Info,
+      label: "Feriados",
+      time: hours.special,
+      highlight: false,
+    },
+  ];
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -46,11 +50,11 @@ export function Hours() {
             start: "top 85%",
           },
         }
-      )
-    }, sectionRef)
+      );
+    }, sectionRef);
 
-    return () => ctx.revert()
-  }, [])
+    return () => ctx.revert();
+  }, []);
 
   return (
     <section
@@ -60,11 +64,7 @@ export function Hours() {
     >
       {/* Decorative wave at top */}
       <div className="absolute top-0 left-0 right-0 h-20 overflow-hidden transform rotate-180">
-        <svg
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-          className="w-full h-full"
-        >
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full">
           <path
             d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
             fill="white"
@@ -76,20 +76,23 @@ export function Hours() {
         {/* Section header */}
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-1 bg-orange-100 rounded-full text-orange-700 text-sm font-medium mb-4">
-            Horarios de Atención
+            {hoursContent.badge}
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 text-balance">
-            Abiertos <span className="text-orange-500">todos los días</span>
+            {hoursContent.title}{" "}
+            <span className="text-orange-500">
+              {hoursContent.titleHighlight || "todos los días"}
+            </span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto text-pretty">
-            Estamos disponibles para recibirte con la mejor atención
+            {hoursContent.subtitle}
           </p>
         </div>
 
         {/* Schedule cards */}
         <div className="max-w-4xl mx-auto grid md:grid-cols-3 gap-6">
           {schedule.map((item) => {
-            const Icon = item.icon
+            const Icon = item.icon;
             return (
               <div
                 key={item.label}
@@ -107,11 +110,7 @@ export function Hours() {
                       : "bg-gradient-to-br from-cyan-500 to-cyan-600 shadow-lg shadow-cyan-500/30"
                   }`}
                 >
-                  <Icon
-                    className={`w-8 h-8 ${
-                      item.highlight ? "text-white" : "text-white"
-                    }`}
-                  />
+                  <Icon className={`w-8 h-8 ${item.highlight ? "text-white" : "text-white"}`} />
                 </div>
 
                 {/* Label */}
@@ -139,10 +138,10 @@ export function Hours() {
                   </div>
                 )}
               </div>
-            )
+            );
           })}
         </div>
       </div>
     </section>
-  )
+  );
 }

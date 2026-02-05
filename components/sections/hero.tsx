@@ -93,6 +93,7 @@ export function Hero() {
               src="/images/logo.webp"
               alt={`${content.site.name} - Logo`}
               fill
+              sizes="(max-width: 1024px) 176px, 192px"
               className="object-contain p-2"
               priority
             />
