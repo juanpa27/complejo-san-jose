@@ -28,6 +28,13 @@ export function ImageGalleryModal({
     setCurrentIndex(initialIndex);
   }, [initialIndex]);
 
+  // Resetear a la primera foto cuando cambian las imágenes (nueva galería)
+  useEffect(() => {
+    if (isOpen) {
+      setCurrentIndex(0);
+    }
+  }, [images, isOpen]);
+
   useEffect(() => {
     if (!isOpen) return;
 
